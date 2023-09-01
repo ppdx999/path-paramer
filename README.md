@@ -18,13 +18,7 @@ const result = replace(path, { user_id: "123", profile_id: "456" }
 //  result is /user/123/profile/456
 ```
 
-If you want to use `path-paramer` to `:` style like this `/user/:user_id/profile/profile_id`, you can achieve it by following steps.
-
-1. install `path-styler`
-
-`npm i path-styler`
-
-2. Use it like this
+If you want to use `path-paramer` for `:`-styled path(ex. `/user/:user_id/profile/profile_id`), you can achieve it by `npm i path-styler` and write code like this.
 
 ```ts
 import {styler} from 'path-styler'
