@@ -17,3 +17,27 @@ const path = "/user/{user_id}/profile/{profile_id}"
 const result = replace(path, { user_id: "123", profile_id: "456" }
 //  result is /user/123/profile/456
 ```
+
+If you want to use `path-paramer` to `:` style like this `/user/:user_id/profile/profile_id`, you can achieve it by following steps.
+
+1. install `path-styler`
+
+`npm i path-styler`
+
+2. Use it like this
+
+```ts
+import {styler} from 'path-styler'
+import {replace} from 'path-paramer'
+
+const convert = newStyler({ var: ':' , case: 'snake' })
+const result = convert('/user/{user_id}/contents/{contents_id}')
+
+const path = "/user/:user_id/profile/:profile_id"
+
+const bracketPath = convert(path)
+// bracketPath = "/user/{user_id}/profile/{profile_id}"
+
+const result = replace(bracketPath, { user_id: "123", profile_id: "456" }
+//  result is /user/123/profile/456
+```
