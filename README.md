@@ -2,6 +2,12 @@
 
 Helper functions for url path paramators
 
+# Install
+
+```
+npm i path-paramer
+```
+
 # Usage
 
 ```ts
